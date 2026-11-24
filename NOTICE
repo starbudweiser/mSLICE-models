@@ -1,0 +1,6 @@
+AuraFace (glintr100.onnx), https://huggingface.co/fal/AuraFace-v1 — Apache License 2.0 (texte dans LICENSE.txt).
+Modèle de reconnaissance de visages ArcFace ResNet-100, entraîné par fal.ai sur des données à usage commercial (selon sa fiche).
+
+Modifications apportées par mSLICE (art. 4.b de la licence) : conversion du fichier ONNX en Core ML (flottants 16 bits), normalisation des pixels
+((x - 127,5) / 127,5) intégrée au modèle, puis compression des poids par palettisation 8 bits (k-moyennes). Aucun réentraînement.
+Usage dans mSLICE : regrouper les apparitions d'un même visage dans une vidéo, sur le Mac de l'utilisateur ; rien n'est envoyé hors du Mac.
